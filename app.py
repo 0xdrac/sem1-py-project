@@ -11,23 +11,20 @@ CUSTOM_CSS = """
 <style>
 :root {
     --accent: #22c55e;
-    --accent-soft: rgba(34, 197, 94, 0.18);
-    --bg-main: #020617;
-    --bg-elevated: #020617;
-    --bg-card: #020617;
-    --border-subtle: rgba(148, 163, 184, 0.28);
-    --text: #e5e7eb;
-    --text-muted: #9ca3af;
+    --bg-main: #1a1a1a;
+    --bg-card: #262626;
+    --bg-elevated: #2a2a2a;
+    --border: #404040;
+    --text: #ffffff;
+    --text-muted: #a3a3a3;
 }
 .stApp {
-    background: radial-gradient(circle at top, #0b1120 0%, #020617 55%, #000000 100%);
+    background: #1a1a1a;
     color: var(--text);
 }
 [data-testid="stSidebar"] {
-    background: radial-gradient(circle at top, #020617 0%, #020617 70%, #000000 100%);
-    backdrop-filter: blur(18px);
-    border-right: 1px solid rgba(15, 23, 42, 0.8);
-    color: var(--text-muted);
+    background: #0f0f0f;
+    border-right: 1px solid var(--border);
 }
 [data-testid="stSidebar"] .stMarkdown, 
 [data-testid="stSidebar"] label, 
@@ -35,68 +32,86 @@ CUSTOM_CSS = """
     color: var(--text-muted) !important;
 }
 .metric-card {
-    padding: 1.2rem;
-    border-radius: 18px;
-    background: radial-gradient(circle at top left, #0f172a, #020617);
-    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.85);
-    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    border-radius: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     color: var(--text);
 }
 .rec-badge {
-    padding: 0.15rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #f9fafb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.badge-green { background: linear-gradient(120deg, #16a34a, #4ade80); }
-.badge-amber { background: linear-gradient(120deg, #facc15, #fb923c); }
-.badge-orange { background: linear-gradient(120deg, #fb923c, #f97316); }
+.badge-green { background: #22c55e; }
+.badge-amber { background: #eab308; }
+.badge-orange { background: #f97316; }
 .hero {
-    padding: 2.1rem 2.2rem;
-    border-radius: 28px;
-    background:
-        radial-gradient(circle at top right, rgba(34, 197, 94, 0.18), transparent 55%),
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
-        linear-gradient(120deg, #020617, #020617);
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    color: #f9fafb;
-    box-shadow: 0 26px 60px rgba(15, 23, 42, 0.9);
+    padding: 2.5rem;
+    border-radius: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
 }
 .hero h1 {
-    font-size: clamp(2.3rem, 4vw, 3.2rem);
-    margin-bottom: 0.6rem;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
 .hero p {
-    font-size: 1.08rem;
-    opacity: 0.95;
+    font-size: 1rem;
     color: var(--text-muted);
+    font-weight: 400;
 }
 .stButton button {
     width: 100%;
-    border-radius: 999px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    background: linear-gradient(120deg, #22c55e, #4ade80);
-    color: #020617;
+    border-radius: 2px;
+    padding: 0.875rem 1.5rem;
+    font-weight: 700;
+    background: var(--accent);
+    color: #000;
     border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
 }
 .stButton button:hover {
-    background: linear-gradient(120deg, #4ade80, #22c55e);
-    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
+    background: #16a34a;
+    transform: translateY(-1px);
 }
 .npk-card {
-    padding: 1rem;
-    border-radius: 18px;
-    border: 1px dashed rgba(148, 163, 184, 0.5);
-    background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617);
+    padding: 1.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text);
+}
+.npk-card h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+.npk-card h2 {
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--text);
 }
 .stMetric {
     color: var(--text);
 }
 .stProgress > div > div {
-    background: linear-gradient(90deg, #22c55e, #4ade80);
+    background: var(--accent);
+}
+h1, h2, h3, h4 {
+    font-weight: 900 !important;
 }
 </style>
 """
